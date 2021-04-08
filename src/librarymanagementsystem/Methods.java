@@ -2,7 +2,7 @@ package librarymanagementsystem;
 
 import java.util.Scanner;
 
-public class Methods {
+public class Methods extends PasswordAndUsernameValidation{
 
 	Scanner scan = new Scanner(System.in);
 		
@@ -11,13 +11,23 @@ public class Methods {
 		regForm.setFirstName(scan.next());
 		System.out.println("Please enter your last name!");
 		regForm.setLastName(scan.next());
-		System.out.println("Please enter a password");
-		regForm.setPassword(scan.nextInt());
+		System.out.println("===========================================");
+		while (!passwordValidation(passwordDatabase)) {
+			passwordValidation(passwordDatabase);		
+		};
+		System.out.println("===========================================");
+		while(!usernameValidation()) {
+			usernameValidation();
+		};
+		System.out.println("===========================================");
 		System.out.println("---=== Registration successfull ! ===---\nThank you for registering " 
-		                   +regForm.getFirstName().toUpperCase() 
-		                   + " " + regForm.getLastName().toUpperCase()+ "\nPlease Log In using your name and password !");
+                +regForm.getFirstName().toUpperCase() 
+                + " " + regForm.getLastName().toUpperCase());
+		System.out.println("===========================================");
+		System.out.println("Please Log In using your username and password !");
 		regForm.setRegistered(true);
 		login(names,regForm);
+		
 	}
 	
 	public void checkIfCustomer(RegistrationForm regForm) {
@@ -31,7 +41,6 @@ public class Methods {
 	}
 	
 	public void login(String names[], RegistrationForm regForm) {
-		Scanner scan = new Scanner(System.in);
 		String name = scan.next();
 		int count = 0;
 		for (int i = 0; i < names.length; i++) {

@@ -1,7 +1,7 @@
 package librarymanagementsystem;
 
 public class Runner{
-
+	
 	public static void main(String[] args) {
 		
 		String names[] = {"Emily","Hannah","Madison","Ashley","Sarah","Alexis",
@@ -22,10 +22,10 @@ public class Runner{
 		methods.checkIfCustomer(regForm);
 		
 		if(!regForm.isMember) {
-			System.out.println("Please register first !");
+			System.out.println("-----===== Please Register First =====-----");
 			methods.register(names,regForm);
 		}else {
-			System.out.println("Great !!! Please Log In using your name and password !");
+			System.out.println("Great !!! Please Log In using your username and password !");
 			methods.login(names,regForm);
 		}
 		
