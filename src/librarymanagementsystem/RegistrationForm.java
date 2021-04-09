@@ -7,6 +7,8 @@ public class RegistrationForm {
 	private int password;
 	boolean isRegistered;
 	boolean isMember;
+	public boolean passwordCreated;
+	public boolean usernameCreated;
 	
 	public String getFirstName() {
 		return firstName;
