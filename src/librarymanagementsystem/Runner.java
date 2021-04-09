@@ -15,6 +15,9 @@ public class Runner{
 				"Madeline","Sara","Kimberly","Courtney","Erin","Brittany","Vanessa",
 				"Jenna","Jacqueline","Caroline","Faith","Makayla","Bailey","Paige"};
 		
+		
+		
+		
 		RegistrationForm regForm = new RegistrationForm();
 		Methods methods = new Methods();
 		
@@ -29,7 +32,8 @@ public class Runner{
 			methods.login(names,regForm);
 		}
 		
-	
+		//Book search method, which executes after registration and log in
+		methods.bookSearch();
 	}
 
 }

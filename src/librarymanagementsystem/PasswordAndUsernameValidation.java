@@ -90,7 +90,6 @@ public class PasswordAndUsernameValidation {
 				System.out.println("Not Created !");
 				return false;
 			}
-		}
-		
+		}	
 	}
 }
